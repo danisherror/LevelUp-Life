@@ -13,6 +13,8 @@ Perfect—let’s focus purely on the **schema design of the quest**, without im
 | `title`       | String | A short name for the quest (e.g., “Drink Water”)   |
 | `description` | String | A longer explanation or instructions for the quest |
 | `category`    | String | A category for the quest                           |
+| `Global`      | String | If yes then show this to others also but           |
+|               |        | need permission from the admin                     |
 
 ---
 
