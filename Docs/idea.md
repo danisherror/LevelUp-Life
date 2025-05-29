@@ -9,7 +9,9 @@ or you can assign some task to yourself like drinking 3 lt water per day or doin
 Here the repeative task will give you points but they will refresh every day, but you will get the points.
 Along with that this site can send you remainders in mail, stating that you have taken these task to complete it today,
 but you have not completed them, like that etc
-=========================================================================
+
+---
+
 That’s a fantastic idea! You’re combining **gamification**, **self-improvement**, and **task management**—a powerful and highly engaging combination. Here’s how you can take your concept and structure it into a full-fledged web platform, along with some suggestions for key features, technical stack, and a basic roadmap.
 
 ---
