@@ -75,11 +75,12 @@ Would you like to move next to:
 
 ##  Quest Completion Table (logs each completion instance)
 
-| Field             | Type     | Description                        |
-| ----------------- | -------- | ---------------------------------- |
-| `id`              | ID       | Unique completion record           |
-| `quest_id`        | ID       | Which quest was completed          |
-| `user_id`         | ID       | Who completed it                   |
-| `completion_date` | Date     | Date completed (no time part)      |
-| `completed_at`    | DateTime | Timestamp of completion            |
-| `points_awarded`  | Integer  | Points granted for this completion |
+| Field             | Type     | Description                                                                |
+| ----------------- | -------- | ---------------------------------------------------------------------------|
+| `id`              | ID       | Unique completion record                                                   |
+| `quest_id`        | ID       | Which quest was completed                                                  |
+| `user_id`         | ID       | Who completed it                                                           |
+| `completion_date` | Date     | Date completed (no time part)                                              |
+| `completed_at`    | DateTime | Timestamp of completion                                                    |
+| `points_awarded`  | Integer  | Points granted for this completion                                         |
+| `description`     | String   | A detailed explanation or instructions for completing the quest            |
