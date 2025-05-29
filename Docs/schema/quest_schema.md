@@ -12,6 +12,7 @@ Perfect—let’s focus purely on the **schema design of the quest**, without im
 | `user_id`     | ID     | The user who owns or created this quest            |
 | `title`       | String | A short name for the quest (e.g., “Drink Water”)   |
 | `description` | String | A longer explanation or instructions for the quest |
+| `category`    | String | A category for the quest                           |
 
 ---
 
