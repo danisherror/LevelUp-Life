@@ -125,3 +125,54 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 ```
+
+
+
+
+```js
+{
+ "success": true,
+ "data": {
+   "_id": "99999999-9999-9999-9999-8f14c101aeff",
+   "inbox": {
+     "optOut": false
+   },
+   "stats": {
+   ---INCLUDES STATS AND BUFFS---
+   },
+   "profile": {
+     "name": "Ezra"
+   },
+   "preferences": {
+     ---INCLUDES INFO ABOUT APPEARANCE AND PUBLIC PREFS---
+   },
+   "party": {
+     "_id": "12345678-0987-abcd-82a6-837c81db4c1e",
+     "quest": {
+       "RSVPNeeded": false,
+       "progress": {}
+     },
+   },
+   "items": {
+     "lastDrop": {
+       "count": 0,
+       "date": "2017-01-15T02:41:35.009Z"
+     },
+       ----INCLUDES QUESTS, FOOD, POTIONS, EGGS, GEAR, CARDS, SPECIAL ITEMS (E.G. SNOWBALLS)----
+     }
+   },
+   "achievements": {
+     "partyUp": true,
+     "habitBirthdays": 2,
+   },
+   "auth": {
+     "timestamps": {
+       "loggedin": "2017-03-05T12:30:54.545Z",
+       "created": "2017-01-12T03:30:11.842Z"
+     }
+   },
+   "id": "99999999-9999-9999-9999-8f14c101aeff"
+ }
+}
+)
+```
