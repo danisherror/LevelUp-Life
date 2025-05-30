@@ -9,3 +9,4 @@
         - Wasted some time, when i was trying to get the user profile in frontend
           after loginin into the website
         - Was not credentials: 'include' in the post request
+- [ ] Quest Creation & Management Create one-time and recurring quests with points and descriptions.
