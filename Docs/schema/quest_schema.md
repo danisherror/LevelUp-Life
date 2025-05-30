@@ -86,3 +86,46 @@ Would you like to move next to:
 | `completed_at`    | DateTime | Timestamp of completion                                                          |
 | `points_awarded`  | Integer  | Points granted for this completion                                               |
 | `description`     | String   | A detailed explanation by the user it may be his feedback or anything acc to him |
+
+https://habitica.com/apidoc/#api-Task-CreateChallengeTasks
+
+```js
+{
+    "success": true,
+    "data": {
+        "_id": "84f02d6a-7b43-4818-a35c-d3336cec4880",
+        "userId": "b0413351-405f-416f-8787-947ec1c85199",
+        "text": "Test API Params",
+        "alias": "test-api-params",
+        "type": "todo",
+        "notes": "",
+        "tags": [
+            "3d5d324d-a042-4d5f-872e-0553e228553e"
+        ],
+        "value": -1,
+        "priority": 2,
+        "attribute": "int",
+        "challenge": {
+            "taskId": "4a29874c-0308-417b-a909-2a7d262b49f6",
+            "id": "f23c12f2-5830-4f15-9c36-e17fd729a812"
+        },
+        "group": {
+            "assignedUsers": [],
+            "approval": {
+                "required": false,
+                "approved": false,
+                "requested": false
+            }
+        },
+        "reminders": [],
+        "createdAt": "2017-01-13T21:23:05.949Z",
+        "updatedAt": "2017-01-14T19:41:29.466Z",
+        "checklist": [],
+        "collapseChecklist": false,
+        "completed": false,
+        "id": "84f02d6a-7b43-4818-a35c-d3336cec4880"
+    },
+    "notifications": []
+}
+`
+

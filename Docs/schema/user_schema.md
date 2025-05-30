@@ -1,3 +1,11 @@
+Need to add following things to the schema
+- Level name like 1-5 level beginer, then expert like that
+- Photo url
+- Profile url
+- Block user
+- Total Log Ins
+- Latest Log In
+
 ```js
 const userSchema = new mongoose.Schema(
   {
