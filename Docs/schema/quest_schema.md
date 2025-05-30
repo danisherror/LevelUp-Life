@@ -11,11 +11,13 @@ Perfect—let’s focus purely on the **schema design of the quest**, without im
 | `id`                | UUID / ID      | Unique identifier for the quest                                                     |
 | `user_id`           | UUID / ID      | Identifier for the user who owns or created the quest                               |
 | `title`             | String         | A short, descriptive name for the quest (e.g., “Drink Water”)                       |
+| `sumary`            | String         | As small description of the quest                                                   |
 | `description`       | String         | A detailed explanation or instructions for completing the quest                     |
 | `category`          | String         | A category label for organizing quests (e.g., “Health”, “Productivity”)             |
 | `is_global`         | Boolean        | If `true`, the quest can be shown to other users, pending admin approval            |
 | `approved_by_admin` | Boolean        | Indicates if the global quest has been approved by an admin                         |
 | `tags`              | Array\[String] | List of tags to allow flexible search and filtering (e.g., `["wellness", "daily"]`) |
+| `Participants`      | Array\[String] | List of users that are taking this quest.                                           |
 | `created_at`        | Timestamp      | Date and time when the quest was created                                            |
 | `updated_at`        | Timestamp      | Date and time when the quest was last updated                                       |
 
