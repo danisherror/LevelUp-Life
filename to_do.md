@@ -10,3 +10,10 @@
           after loginin into the website
         - Was not credentials: 'include' in the post request
 - [ ] Quest Creation & Management Create one-time and recurring quests with points and descriptions.
+    - Requirements
+        - User will be able to create a basic quest
+        - User can create recurring quest
+            - Daily
+            - Weekly (one-time)   --> add on which day of the week (like S,M,T,W,T,F,S)
+            - Monthly (one-time)  --> add on which date
+            - Yearly (one-time)  --> add on which date 
