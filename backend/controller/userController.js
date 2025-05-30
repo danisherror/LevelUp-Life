@@ -1,5 +1,6 @@
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
+const BigPromise=require('../middlewares/bigPromise')
 const MAX_AGE = 7 * 24 * 60 * 60 * 1000; // 7 days
 
 exports.signup = async (req, res) => {
@@ -28,8 +29,8 @@ exports.signup = async (req, res) => {
     res.cookie('token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production', // use HTTPS in prod
-      sameSite: 'strict',
-      maxAge: MAX_AGE,
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+      maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
     res.status(201).json({
@@ -44,8 +45,7 @@ exports.signup = async (req, res) => {
 
 exports.signin = async (req, res) => {
   try {
-    const { email: identifier, password } = req.body;
-
+    const {  identifier, password } = req.body;
     if (!identifier || !password) {
       return res.status(400).json({ message: 'Please provide username/email and password.' });
     }
@@ -69,9 +69,9 @@ exports.signin = async (req, res) => {
     const token = user.getJwtToken();
     res.cookie('token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production', // secure in production only
-      sameSite: 'strict',
-      maxAge: MAX_AGE,
+      secure: process.env.NODE_ENV === 'production' ? 'none' : 'lax', // secure in production only
+      sameSite: 'lax',
+      maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
     res.status(200).json({
@@ -97,3 +97,16 @@ exports.logout = (req, res) => {
     message: 'Logged out successfully',
   });
 };
+
+exports.userProfile=BigPromise(async(req,res)=>{
+
+    const id=req.user._id
+    const user=await User.findById(id);
+    if(!user)
+    {
+      return res.status(401).json({ message: 'Invalid credentials.' });
+    }
+    res.status(200).json({
+        user
+    })
+})

@@ -10,7 +10,8 @@ app.use(cookieParser());
 
 // Your routes here
 app.use(cors({
-    origin: process.env.front_end_url
+    origin: process.env.front_end_url,
+    credentials: true  
 }));
 
 const user=require('./Routes/users')
